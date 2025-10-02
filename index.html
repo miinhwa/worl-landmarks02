@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF‑8" />
+  <meta name="viewport" content="width=device‑width, initial‑scale=1.0" />
+  <title>Мечети мира — карта и поиск</title>
+  <!-- Подключаем стили Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256‑o9N1jJeHRUnR9DOMksnqC2GIWFp8pY8Dg8Oqv6aM+4g="
+    crossorigin=""
+  />
+  <!-- Собственные стили -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Мечети мира</h1>
+    <p>
+      Найдите мечеть в любой стране мира. Сначала выберите страну, а затем
+      воспользуйтесь поиском по названию мечети.
+    </p>
+  </header>
+  <section id="search-panel">
+    <!-- Поиск по стране -->
+    <label for="countryInput">Страна:</label>
+    <input
+      id="countryInput"
+      type="text"
+      placeholder="Введите название страны…"
+      list="countryList"
+    />
+    <datalist id="countryList"></datalist>
+
+    <!-- Поиск по мечети (появится после выбора страны) -->
+    <label for="mosqueInput" id="mosqueLabel" style="display:none">Мечеть:</label>
+    <input
+      id="mosqueInput"
+      type="text"
+      placeholder="Введите название мечети…"
+      list="mosqueList"
+      style="display:none"
+    />
+    <datalist id="mosqueList"></datalist>
+  </section>
+  <!-- Карта -->
+  <div id="map"></div>
+
+  <!-- Скрипты -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256‑lR2YjgAayTig3g8TrO36D6a2vWJoNqyEI0W5QFvKdKc="
+    crossorigin=""
+  ></script>
+  <script src="script.js"></script>
+</body>
+</html>
